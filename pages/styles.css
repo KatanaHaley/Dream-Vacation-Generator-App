@@ -3,7 +3,55 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', 'Garamond', 'Brush Script MT', 'Calligrapher' sans-serif;
+    overflow: hidden;
+}
+
+p {
+    display: flex;
+    color: #32F3EF;
+    font-size: 23px;   
+}
+
+
+
+span {
+    display: flex;
+
+    padding-right: 20px;
+    font-weight: 900;
+}
+
+.cursive {
+    display: flex;
+
+    font-family: 'Brush Script MT';
+}
+
+.garamond {
+    display: flex;
+
+    font-family: 'Garamond';
+}
+
+.manrope {
+    display: flex;
+
+    font-family: 'Manrope';
+}
+
+.calligrapher {
+    display: flex;
+
+    font-family: 'Calligrapher';
+}
+
+
+
+.marquee-width {
+    display: flex;
+
+    width: 800px;
 }
 
 .root {
@@ -14,12 +62,15 @@ body {
     flex-flow: column nowrap;
     gap: 10px;
     height: 100vh;
-    overflow: auto;
-    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* padding: 0px; */
     position: relative;
+    max-width: 100%;
 }
 
 .container {
+    overflow-x: hidden;
     display: flex;
     place-content: center flex-start;
     align-items: center;
@@ -27,8 +78,7 @@ body {
     flex-flow: column nowrap;
     gap: 10px;
     height: fit-content;
-    max-width: 975px;
-    overflow: auto;
+    max-width: fit-content;
     padding: 50px;
     position: relative;
     width: auto;
@@ -46,6 +96,12 @@ body {
 .header-title {
     display: flex;
     gap: 12px;
+    background-image:url("../public/suitcase.png");
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 21rem;
+    filter: brightness(.9);
+    border-radius: 25px;
 }
 
 .header-title h1 {
@@ -56,14 +112,16 @@ body {
     line-height: 1.2em;
     text-align: center;
     margin: 0;
+    font-family: "Manrope";
 }
 
 .header-subtitle h2 {
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.4em;
-    color: rgba(255, 255, 255, 0.75);
+    color: #09C0E2;
+    font-family: "Manrope";
 }
 
 .prompt-container {
@@ -108,9 +166,11 @@ body {
     letter-spacing: 0px;
     line-height: 1.6em;
     text-align: start;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(0, 0, 0, 0.75);
     text-decoration: none;
     text-transform: none;
+    background-image: linear-gradient(to bottom right, white, #32F3EF);
+
 }
 
 textarea {
@@ -172,7 +232,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: #CB1818;
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -186,6 +246,9 @@ textarea {
     width: min-content;
     will-change: transform;
     cursor: pointer;
+    font-family: 'Manrope';
+    background-image: linear-gradient(to bottom right, white, #EF1303);
+
 }
 
 .generate {
